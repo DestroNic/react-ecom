@@ -1,0 +1,9 @@
+.layout {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [header-s] 50px [header-e navbar-s] 50px [navbar-e content-s] 1fr [content-e];
+      grid-template-rows: [header-s] 50px [header-e navbar-s] 50px [navbar-e content-s] 1fr [content-e];
+  -ms-grid-columns: minmax(20px, 250px) [s] 1fr [e] minmax(20px, 250px);
+      grid-template-columns: minmax(20px, 250px) [s] 1fr [e] minmax(20px, 250px);
+}
+/*# sourceMappingURL=layout.css.map */

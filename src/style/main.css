@@ -1,0 +1,50 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.layout {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [header-s] 50px [header-e navbar-s] 50px [navbar-e content-s] 1fr [content-e];
+      grid-template-rows: [header-s] 50px [header-e navbar-s] 50px [navbar-e content-s] 1fr [content-e];
+  -ms-grid-columns: minmax(20px, 250px) [s] 1fr [e] minmax(20px, 250px);
+      grid-template-columns: minmax(20px, 250px) [s] 1fr [e] minmax(20px, 250px);
+}
+
+.header {
+  grid-row: header-s/header-e;
+  grid-column: 1/-1;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar {
+  grid-row: navbar-s/navbar-e;
+  grid-column: 1/-1;
+  background-color: #333333;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sign-in {
+  grid-row: content-s/content-e;
+  grid-column: s/e;
+}
+
+.sign-up {
+  grid-row: content-s/content-e;
+  grid-column: s/e;
+}
+/*# sourceMappingURL=main.css.map */
