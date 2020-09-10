@@ -47,4 +47,12 @@ html {
   grid-row: content-s/content-e;
   grid-column: s/e;
 }
+
+.page-title {
+  color: #666666;
+  font-family: 'Titillium';
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 37px;
+}
 /*# sourceMappingURL=main.css.map */
