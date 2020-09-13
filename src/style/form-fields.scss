@@ -2,6 +2,10 @@
     display: grid;
     gap: 6.5px;
 
+    & > * {
+        padding-left: 20px;
+    }
+
     &__label {
         color: #808080;
         font-size: 14px;
