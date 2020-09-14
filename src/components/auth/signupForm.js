@@ -9,34 +9,62 @@ import history from '../../history';
 class SignUpForm extends Component {
     render() {
         const { className, handleSubmit } = this.props;
-        const links = [
+        const info = [
             {
                 _id: 0,
-                title: 'Not registered? Create account here',
-                onClick: () => history.push('/signup')
+                title: 'At least 6 characters'
             },
             {
                 _id: 1,
-                title: 'Forgot account email?',
-                onClick: () => console.log('forgot email')
+                title: 'At least one number'
             },
             {
                 _id: 2,
-                title: 'Forgot password?',
-                onClick: () => console.log('forgot password')
+                title: 'At least one symbol'
             }
         ]
         return (
             <form onSubmit={handleSubmit} className={`${className} sign-up-form`}>
-                <Field className='sign-up-form__name' name='name' type='text' title='Name' placeholder='Name' component={FormInput} />
-                <Field className='sign-up-form__email' name='email' type='email' title='Email' placeholder='Email' component={FormInput} />
-                <Field className='sign-up-form__password' name='password' type='password' title='Password' placeholder='Password' component={FormInput} />
-                <Field className='sign-up-form__confirm_password' name='confirm' type='password' title='Confirm Password' placeholder='Confirm Password' component={FormInput} />
-                <div className='sign-up-form__line'></div>
-                <Field className='sign-up-form__login' onClick={() => console.log('trying to submit')} name='login' type='submit' title='Login'  component={FormButton} />
+                <Field className='sign-up-form__name'
+                type='name'
+                title='Name'
+                placeholder='Name'
+                name='name'
+                component={FormInput}/>
+                <Field className='sign-up-form__email'
+                type='email'
+                title='Email'
+                placeholder='Email'
+                name='email'
+                component={FormInput}/>
+                <Field className='sign-up-form__password'
+                type='password'
+                title='Password'
+                placeholder='Password'
+                name='password'
+                component={FormInput}/>
+                <Field className='sign-up-form__confirm'
+                type='password'
+                title='Confirm Password'
+                placeholder='Confirm Password'
+                name='confirm'
+                component={FormInput}/>
 
-                <Field className='sign-up-form__back' onClick={() => console.log('trying to submit')} name='back' short={true} type='button' title='Back'  component={FormButton} />
-                <Details className='sign-up-form__details' title='QuickLinks' links={links} />
+                <div className='sign-up-form__line'></div>
+                <Field className='sign-up-form__login'
+                onClick={() => history.push('/account')}
+                type='submit'
+                title='Create Account'
+                name='login'
+                component={FormButton}/>
+                <Field className='sign-up-form__back'
+                onClick={() => history.push('/signin')}
+                type='button'
+                title='Back'
+                name='back'
+                short={true}
+                component={FormButton}/>
+                <Details className='sign-up-form__details' title='Password Requirement' info={info} />
             </form>
         )
     }
