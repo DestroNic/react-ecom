@@ -2,4 +2,44 @@
   grid-row: content-s/content-e;
   grid-column: s/e;
 }
+
+.sign-in__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [email-s] 64px [email-e password-s] 64px [password-e] minmax(20px, 289px) [line-s] 2px [line-e login-s] 38px [login-e];
+      grid-template-rows: [email-s] 64px [email-e password-s] 64px [password-e] minmax(20px, 289px) [line-s] 2px [line-e login-s] 38px [login-e];
+}
+
+.sign-in-form > * {
+  grid-column: 1/-1;
+}
+
+.sign-in-form__email {
+  grid-row: email-s/email-e;
+}
+
+.sign-in-form__line {
+  grid-row: line-s/line-e;
+  grid-column: 1/-1;
+  border-top: 1px solid #ccc;
+}
+
+.sign-in-form__password {
+  margin-top: 15px;
+  grid-row: password-s/password-e;
+}
+
+.sign-in-form__login {
+  margin-top: 39px;
+  grid-row: login-s/login-e;
+}
+
+.sign-in-form__details {
+  grid-row: 1/-1;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
 /*# sourceMappingURL=signin.css.map */

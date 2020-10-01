@@ -2,4 +2,59 @@
   grid-row: content-s/content-e;
   grid-column: s/e;
 }
+
+.sign-up__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [name-s] 64px [name-e email-s] 64px [email-e space-s] 35px [space-e password-s] 64px [password-e confirm-s] 64px [confirm-e] minmax(20px, 81px) [line-s] 26px [line-e buttons-s] 38px [buttons-e];
+      grid-template-rows: [name-s] 64px [name-e email-s] 64px [email-e space-s] 35px [space-e password-s] 64px [password-e confirm-s] 64px [confirm-e] minmax(20px, 81px) [line-s] 26px [line-e buttons-s] 38px [buttons-e];
+  -ms-grid-columns: [back-s] 137px [back-e space-s] 40px [space-e create-s] 1fr [create-e] 1fr;
+      grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e create-s] 1fr [create-e] 1fr;
+  gap: 15px;
+}
+
+.sign-up-form > * {
+  grid-column: 1/-1;
+}
+
+.sign-up-form__name {
+  grid-row: name-s/name-e;
+}
+
+.sign-up-form__email {
+  grid-row: email-s/email-e;
+}
+
+.sign-up-form__password {
+  grid-row: password-s/password-e;
+}
+
+.sign-up-form__confirm {
+  grid-row: confirm-s/confirm-e;
+}
+
+.sign-up-form__line {
+  grid-row: line-s/line-e;
+  border-top: 1px solid #ccc;
+  margin-bottom: 24px;
+}
+
+.sign-up-form__login {
+  grid-row: buttons-s/buttons-e;
+  grid-column: create-s/create-e;
+}
+
+.sign-up-form__back {
+  grid-row: buttons-s/buttons-e;
+  grid-column: back-s/back-e;
+}
+
+.sign-up-form__details {
+  grid-row: 1/-1;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
 /*# sourceMappingURL=signup.css.map */
