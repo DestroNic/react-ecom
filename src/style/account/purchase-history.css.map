@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEK,AAAD,6BAAa,CAAC;EACV,aAAa,EAAE,cAAc;CAChC;;AAEA,AAAD,gCAAgB,CAAC;EACb,aAAa,EAAE,iBAAiB;CACnC",
+    "sources": [
+        "purchase-history.scss"
+    ],
+    "names": [],
+    "file": "purchase-history.css"
+}

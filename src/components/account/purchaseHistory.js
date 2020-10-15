@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
+import Purchases from './purchases';
+
+import PageTitle from '../pageTitle';
+import PurchaseDetail from './purchaseDetail';
 
 class PurchaseHistory extends Component {
     render() {
         return (
-            <div>
-                account info
+            <div className='purchase-history'>
+                <PageTitle className='purchase-history__page-title' title='Purchase History' />
+
+                <Purchases className='purchase-history__purchases' />
+
+                <PurchaseDetail className='purchase-history__detail' />
+
+                <div className='purchase-history__border-bottom'></div>
             </div>
         )
     }
