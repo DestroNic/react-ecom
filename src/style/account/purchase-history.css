@@ -1,8 +1,25 @@
+.purchase-history__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 37px 0;
+}
+
 .purchase-history__page-title {
   border-bottom: 1px solid #ccc;
 }
 
 .purchase-history__border-bottom {
   border-bottom: 1px solid #f2f2f2;
+}
+
+.purchases {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  -ms-grid-columns: (80px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 80px);
+  width: 360px;
 }
 /*# sourceMappingURL=purchase-history.css.map */
