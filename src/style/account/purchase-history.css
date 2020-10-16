@@ -22,4 +22,88 @@
       grid-template-columns: repeat(auto-fit, 80px);
   width: 360px;
 }
+
+.purchase-detail {
+  width: 600px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [s] 1fr [m] 1fr [e];
+      grid-template-columns: [s] 1fr [m] 1fr [e];
+  -ms-grid-rows: [s] 1fr [sm] 1fr [m-s] 25px [m-e] 1fr [me] 1fr [e];
+      grid-template-rows: [s] 1fr [sm] 1fr [m-s] 25px [m-e] 1fr [me] 1fr [e];
+}
+
+.purchase-detail__order-date {
+  grid-column: s/m;
+  grid-row: s/sm;
+}
+
+.purchase-detail__order-number {
+  grid-column: s/m;
+  grid-row: sm/m-s;
+}
+
+.purchase-detail__shipping-address {
+  grid-column: s/m;
+  grid-row: m-e/e;
+}
+
+.purchase-detail__total {
+  grid-column: m/e;
+  grid-row: s/sm;
+}
+
+.purchase-detail__credit-card {
+  grid-column: m/e;
+  grid-row: sm/m-s;
+}
+
+.purchase-detail__track-shipment {
+  grid-column: m/e;
+  grid-row: m-e/me;
+}
+
+.purchase-detail__print-receipt {
+  grid-column: m/e;
+  grid-row: me/e;
+}
+
+.purchase-detail__print-receipt, .purchase-detail__track-shipment {
+  width: 150px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #00cb79;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.purchase-detail-label {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [s] 1fr [e];
+      grid-template-rows: [s] 1fr [e];
+  -ms-grid-columns: [s] 1fr [m] 1fr [e];
+      grid-template-columns: [s] 1fr [m] 1fr [e];
+  gap: 10px;
+}
+
+.purchase-detail-label > * {
+  grid-row: s/e;
+}
+
+.purchase-detail-label__title {
+  grid-column: s/m;
+  text-align: right;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.purchase-detail-label__value {
+  grid-column: m/e;
+  text-align: left;
+  color: #666666;
+  font-size: 14px;
+}
 /*# sourceMappingURL=purchase-history.css.map */
