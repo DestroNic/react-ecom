@@ -41,4 +41,29 @@
   background: #999;
   width: 137px;
 }
+
+.form-button-long-gray {
+  display: -ms-grid;
+  display: grid;
+  gap: 6.5px;
+}
+
+.form-button-long-gray__button {
+  height: 38px;
+  width: 243px;
+  border-radius: 20px;
+  background-color: #666666;
+  font-size: 16px;
+  color: white;
+}
+
+.form-button-long-gray__button:focus {
+  outline: none;
+}
+
+.form-button-long-gray__label {
+  color: #808080;
+  padding-left: 20px;
+  font-size: 14px;
+}
 /*# sourceMappingURL=form-fields.css.map */
