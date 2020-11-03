@@ -492,4 +492,11 @@ body {
   grid-row: content-s/content-e;
   grid-column: s/e;
 }
+
+.shop-search-bar input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: 20px;
+}
 /*# sourceMappingURL=main.css.map */
