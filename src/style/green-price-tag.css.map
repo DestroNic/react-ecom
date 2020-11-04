@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACb,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;CACnB",
+    "sources": [
+        "green-price-tag.scss"
+    ],
+    "names": [],
+    "file": "green-price-tag.css"
+}
