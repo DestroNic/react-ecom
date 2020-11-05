@@ -32,8 +32,8 @@
   display: grid;
   -ms-grid-rows: [s] 1fr [e];
       grid-template-rows: [s] 1fr [e];
-  -ms-grid-columns: 20px [s] 20px [icon-e] 1fr [e];
-      grid-template-columns: 20px [s] 20px [icon-e] 1fr [e];
+  -ms-grid-columns: 20px [s] 20px [icon-e] 1fr [e] 50px;
+      grid-template-columns: 20px [s] 20px [icon-e] 1fr [e] 50px;
 }
 
 .search-bar-grid__icon {
