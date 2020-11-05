@@ -7,7 +7,9 @@
       grid-template-rows: 30px [search-bar-s] 38px [search-bar-e products-s] 1fr [products-e];
   -ms-grid-columns: [s] minmax(100px, 1035px) [e];
       grid-template-columns: [s] minmax(100px, 1035px) [e];
-  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 57px;
 }
 

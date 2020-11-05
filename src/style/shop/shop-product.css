@@ -1,4 +1,63 @@
 .shop-product {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1/-1;
+      grid-template-rows: 1/-1;
+  -ms-grid-columns: 1/-1;
+      grid-template-columns: 1/-1;
+}
+
+.shop-product > * {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+}
+
+.shop-product {
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  -moz-perspective: 150rem;
+}
+
+.shop-product__front, .shop-product__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.shop-product__back {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.shop-product:hover .shop-product__front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.shop-product:hover .shop-product__back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.shop-product__front {
+  height: 314px;
+  width: 240px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shop-product__front__title {
+  color: #333;
+  font-size: 18px;
+  font-family: 'Titillium Web';
+}
+
+.shop-product__back {
   height: 314px;
   width: 240px;
   background-color: white;
@@ -14,11 +73,11 @@
   row-gap: 5px;
 }
 
-.shop-product > * {
+.shop-product__back > * {
   grid-column: s/e;
 }
 
-.shop-product__title {
+.shop-product__back__title {
   color: #00cb79;
   font-family: "Encode Sans Condensed";
   font-size: 16px;
@@ -26,23 +85,23 @@
   grid-row: title-s/title-e;
 }
 
-.shop-product__description {
+.shop-product__back__description {
   font-size: 13px;
   color: #333333;
   grid-row: description-s/description-e;
 }
 
-.shop-product__price {
+.shop-product__back__price {
   grid-row: price-s/price-e;
 }
 
-.shop-product__quantity {
+.shop-product__back__quantity {
   -ms-grid-column-align: start;
       justify-self: start;
   grid-row: footer-s/footer-e;
 }
 
-.shop-product__add-to-cart {
+.shop-product__back__add-to-cart {
   grid-row: footer-s/footer-e;
   height: 40px;
   width: 97px;
@@ -63,12 +122,12 @@
   transition: all .3s ease;
 }
 
-.shop-product__add-to-cart:hover {
+.shop-product__back__add-to-cart:hover {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
 }
 
-.shop-product__add-to-cart:active {
+.shop-product__back__add-to-cart:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
