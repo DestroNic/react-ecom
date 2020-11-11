@@ -1,9 +1,11 @@
 import {
+    SET_CART_PRODUCTS,
     SET_PURCHASE_DETAIL,
     SET_USER_PURCHASES
 } from '../actions/types';
 
 const INITIAL_STATE = {
+    cartProducts : [],
     purchases: [],
     purchaseDetail: {
         _id: -1,
@@ -20,6 +22,12 @@ const INITIAL_STATE = {
 
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
+        case SET_CART_PRODUCTS:
+            return {
+                ...state,
+                cartProducts: action.payload
+            }
+
         case SET_USER_PURCHASES:
             return {
                 ...state,
