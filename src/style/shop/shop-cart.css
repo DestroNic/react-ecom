@@ -68,6 +68,7 @@
   display: -ms-grid;
   display: grid;
   overflow-y: scroll;
+  row-gap: 45px;
 }
 
 .cart-content__footer {

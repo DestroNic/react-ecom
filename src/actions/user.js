@@ -21,7 +21,7 @@ export function fetchCartProducts() {
                     _id: 0,
                     title: 'JavaScript in the Browser',
                     description: 'Lorem Ipsum Generators. Think classic lorem ipsum is passé? Give your next project a bit more edge with these funny and unique text generators.',
-                    price: '1.99',
+                    price: 1.99,
                     belongsTo: [0, 1]
                 },
                 quantity: 2
@@ -32,7 +32,7 @@ export function fetchCartProducts() {
                     _id: 1,
                     title: 'Graph Database',
                     description: 'Lorem Ipsum Generators. Think classic lorem ipsum is passé? Give your next project a bit more edge with these funny and unique text generators.',
-                    price: '1.99',
+                    price: 1.99,
                     belongsTo: [0, 6]
                 },
                 quantity: 1
