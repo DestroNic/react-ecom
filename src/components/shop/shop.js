@@ -8,6 +8,13 @@ import ShopSearchBar from './shopSearchbar';
 
 class Shop extends Component {
     
+    constructor() {
+        super()
+        this.state = {
+            showCart: true
+        }
+    }
+    
     componentDidMount() {
         const headerLinks = [
             {
@@ -36,21 +43,26 @@ class Shop extends Component {
     }
     
     render() {
-        return <ShopCart className='shop__cart' />;
+        // return <ShopCart className='shop__cart' />;
         
         return (
-        <div className='shop'>
-            <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar' />
-            <div className='shop__products'>
+            <div className='shop'>
+                <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar'/>
+                <div className='shop__products'>
+                    {
+                        this.props.filteredProducts.map(product => {
+                            return (
+                                <ShopProduct {...product} key={product._id} />
+                            )
+                        })
+                    }
+                </div>
                 {
-                    this.props.filteredProducts.map(product => {
-                        return (
-                            <ShopProduct {...product} key={product._id} />
-                        )
-                    })
+                    this.state.showCart ? <ShopCart className='shop__cart'/> : ''
                 }
+                
+                {/* shop cart button */}
             </div>
-        </div>
         )
     }
 }
