@@ -3,14 +3,13 @@
   grid-column: s/e;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 30px [search-bar-s] 38px [search-bar-e products-s] 1fr [products-e];
-      grid-template-rows: 30px [search-bar-s] 38px [search-bar-e products-s] 1fr [products-e];
+  -ms-grid-rows: 30px [search-bar-s] 38px [search-bar-e] 57px [products-s] 1fr [products-e];
+      grid-template-rows: 30px [search-bar-s] 38px [search-bar-e] 57px [products-s] 1fr [products-e];
   -ms-grid-columns: [s] minmax(100px, 1035px) [e];
       grid-template-columns: [s] minmax(100px, 1035px) [e];
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 57px;
 }
 
 .shop__search-bar {
@@ -31,5 +30,15 @@
   width: 100%;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+.shop__cart-button {
+  z-index: 5;
+}
+
+.shop__cart, .shop__cart-button {
+  position: absolute;
+  top: 115px;
+  right: 0px;
 }
 /*# sourceMappingURL=shop.css.map */
