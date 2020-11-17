@@ -982,4 +982,9 @@ body {
   font-size: 18px;
   font-weight: 600;
 }
+
+.review {
+  grid-row: content-s/conten-e;
+  grid-column: s/e;
+}
 /*# sourceMappingURL=main.css.map */
