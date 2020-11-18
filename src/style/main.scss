@@ -2,6 +2,7 @@
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 *,
@@ -45,3 +46,4 @@ body {
 @import './green-price-tag.scss';
 
 @import './order/review.scss';
+@import './order/reviewForm.scss';

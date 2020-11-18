@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 *,
@@ -495,6 +496,7 @@ body {
 .shop {
   grid-row: content-s/content-e;
   grid-column: s/e;
+  overflow-x: hidden;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 30px [search-bar-s] 38px [search-bar-e] 57px [products-s] 1fr [products-e];
@@ -990,5 +992,36 @@ body {
 .review {
   grid-row: content-s/conten-e;
   grid-column: s/e;
+}
+
+.review__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [line-s] 26px [line-e buttons-s] 38px [buttons-e];
+      grid-template-rows: [line-s] 26px [line-e buttons-s] 38px [buttons-e];
+  -ms-grid-columns: [back-s] 137px [back-e space-s] 40px [space-e proceed-s] 1fr [proceed-e] 1fr;
+      grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e proceed-s] 1fr [proceed-e] 1fr;
+  grid-row-gap: 15px;
+}
+
+.review-form__products {
+  grid-column: 1/-1;
+}
+
+.review-form__line {
+  grid-column: 1/-1;
+  grid-row: line-s/line-e;
+  border-top: 1px solid #ccc;
+  margin-bottom: 24px;
+}
+
+.review-form__back {
+  grid-row: buttons-s/buttons-e;
+  grid-column: back-s/back-e;
+}
+
+.review-form__proceed {
+  grid-row: buttons-s/buttons-e;
+  grid-column: proceed-s/proceed-e;
 }
 /*# sourceMappingURL=main.css.map */

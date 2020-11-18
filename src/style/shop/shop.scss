@@ -1,6 +1,7 @@
 .shop {
     grid-row: content-s/content-e;
     grid-column: s/e;
+    
 
     display: grid;
     grid-template-rows: 30px [search-bar-s] 38px [search-bar-e] 57px [products-s] 1fr [products-e];

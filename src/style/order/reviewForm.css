@@ -1,0 +1,22 @@
+.review-form__products {
+  grid-column: 1/-1;
+  grid-row: products-s/products-e;
+}
+
+.review-form__line {
+  grid-column: 1/-1;
+  grid-row: line-s/line-e;
+  border-top: 1px solid #ccc;
+  margin-bottom: 24px;
+}
+
+.review-form__back {
+  grid-row: buttons-s/buttons-e;
+  grid-column: back-s/back-e;
+}
+
+.review-form__proceed {
+  grid-row: buttons-s/buttons-e;
+  grid-column: proceed-s/proceed-e;
+}
+/*# sourceMappingURL=reviewForm.css.map */
