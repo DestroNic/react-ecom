@@ -496,7 +496,6 @@ body {
 .shop {
   grid-row: content-s/content-e;
   grid-column: s/e;
-  overflow-x: hidden;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 30px [search-bar-s] 38px [search-bar-e] 57px [products-s] 1fr [products-e];
@@ -997,8 +996,8 @@ body {
 .review__form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: [line-s] 26px [line-e buttons-s] 38px [buttons-e];
-      grid-template-rows: [line-s] 26px [line-e buttons-s] 38px [buttons-e];
+  -ms-grid-rows: [products-s] 400px [products-e line-s] 26px [line-e buttons-s] 38px [buttons-e];
+      grid-template-rows: [products-s] 400px [products-e line-s] 26px [line-e buttons-s] 38px [buttons-e];
   -ms-grid-columns: [back-s] 137px [back-e space-s] 40px [space-e proceed-s] 1fr [proceed-e] 1fr;
       grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e proceed-s] 1fr [proceed-e] 1fr;
   grid-row-gap: 15px;
@@ -1006,6 +1005,8 @@ body {
 
 .review-form__products {
   grid-column: 1/-1;
+  grid-row: products-s/products-e;
+  overflow-y: scroll;
 }
 
 .review-form__line {

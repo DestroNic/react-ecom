@@ -1,0 +1,75 @@
+.review-product {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [image-s] 80px [image-e title-s] 1fr [title-e quantity-s] 1fr [quantity-e price-s] 0.5fr [price-e];
+      grid-template-columns: [image-s] 80px [image-e title-s] 1fr [title-e quantity-s] 1fr [quantity-e price-s] 0.5fr [price-e];
+  -ms-grid-rows: [s] 1fr [e];
+      grid-template-rows: [s] 1fr [e];
+  grid-column-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review-product > * {
+  grid-row: s/e;
+}
+
+.review-product__image {
+  grid-column: image-s/image-e;
+}
+
+.review-product__title {
+  grid-column: title-s/title-e;
+  font-size: 18px;
+  font-family: 'Titillium Web';
+  color: #333;
+}
+
+.review-product__quantity {
+  grid-column: quantity-s/quantity-e;
+  font-size: 18px;
+  font-weight: 600;
+  color: #666666;
+}
+
+.review-product__price {
+  grid-column: price-s/price-e;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.review-form__legend {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80px [name-s] 1fr [name-e quantity-s] 1fr [quantity-e price-s] 0.5fr [price-e] 40px;
+      grid-template-columns: 80px [name-s] 1fr [name-e quantity-s] 1fr [quantity-e price-s] 0.5fr [price-e] 40px;
+  -ms-grid-rows: [s] 1fr [e];
+      grid-template-rows: [s] 1fr [e];
+  grid-column-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review-form__legend > * {
+  grid-row: s/e;
+}
+
+.review-form__legend__name {
+  grid-column: name-s/name-e;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.review-form__legend__quantity {
+  grid-column: quantity-s/quantity-e;
+}
+
+.review-form__legend__price {
+  grid-column: price-s/price-e;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+/*# sourceMappingURL=reviewProduct.css.map */

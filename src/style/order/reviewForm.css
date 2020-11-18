@@ -1,7 +1,22 @@
+.review-form__legend {
+  grid-row: legend-s/legend-e;
+  grid-column: 1/-1;
+  font-size: 14px;
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 11px;
+}
+
 .review-form__products {
   grid-column: 1/-1;
   grid-row: products-s/products-e;
   overflow-y: scroll;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (80px)[auto-fit];
+      grid-template-rows: repeat(auto-fit, 80px);
+  grid-row-gap: 12px;
+  -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .review-form__line {
