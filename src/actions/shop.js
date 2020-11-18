@@ -67,49 +67,56 @@ export function fetchShopProducts() {
                 title: 'JavaScript in the Browser',
                 description: 'Lorem Ipsum Generators. Think classic lorem ipsum is passé? Give your next project a bit more edge with these funny and unique text generators.',
                 price: '1.99',
-                belongsTo: [0, 1]
+                belongsTo: [0, 1],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 1,
                 title: 'Graph Database',
                 description: 'Lorem Ipsum Generators. Think classic lorem ipsum is passé? Give your next project a bit more edge with these funny and unique text generators.',
                 price: '1.99',
-                belongsTo: [0, 6]
+                belongsTo: [0, 6],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 2,
                 title: 'Full Stack development',
                 description: 'Lorem Ipsum Generators. Think classic lorem ipsum is passé? Give your next project a bit more edge with these funny and unique text generators.',
                 price: '1.99',
-                belongsTo: [0, 1, 4]
+                belongsTo: [0, 1, 4],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 3,
                 title: 'User interface design',
                 description: 'Lorem Ipsum Generators. Think classic lorem ipsum is passé? Give your next project a bit more edge with these funny and unique text generators.',
                 price: '1.99',
-                belongsTo: [0, 2]
+                belongsTo: [0, 2],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 4,
                 title: 'Javascript Development',
                 description: 'Lorem Ipsum Generators. Think classic lorem ipsum is passé? Give your next project a bit more edge with these funny and unique text generators.',
                 price: '1.99',
-                belongsTo: [0, 1]
+                belongsTo: [0, 1],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 5,
                 title: 'User Experience Design',
                 description: 'Lorem Ipsum Generators. Think classic lorem ipsum is passé? Give your next project a bit more edge with these funny and unique text generators.',
                 price: '1.99',
-                belongsTo: [0, 2]
+                belongsTo: [0, 2],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 6,
                 title: 'Object Oriented Programming',
                 description: 'Lorem Ipsum Generators. Think classic lorem ipsum is passé? Give your next project a bit more edge with these funny and unique text generators.',
                 price: '1.99',
-                belongsTo: [0, 6]
+                belongsTo: [0, 6],
+                imageUrl: 'http://via.placeholder.com/80x80'
             }
         ]
     })
