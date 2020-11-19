@@ -996,17 +996,32 @@ body {
 .review__form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: [products-s] 400px [products-e line-s] 26px [line-e buttons-s] 38px [buttons-e];
-      grid-template-rows: [products-s] 400px [products-e line-s] 26px [line-e buttons-s] 38px [buttons-e];
+  -ms-grid-rows: [legend-s] 30px [legend-e products-s] 400px [products-e line-s] 26px [line-e buttons-s] 38px [buttons-e];
+      grid-template-rows: [legend-s] 30px [legend-e products-s] 400px [products-e line-s] 26px [line-e buttons-s] 38px [buttons-e];
   -ms-grid-columns: [back-s] 137px [back-e space-s] 40px [space-e proceed-s] 1fr [proceed-e] 1fr;
       grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e proceed-s] 1fr [proceed-e] 1fr;
   grid-row-gap: 15px;
+}
+
+.review-form__legend {
+  grid-row: legend-s/legend-e;
+  grid-column: 1/-1;
+  font-size: 14px;
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 11px;
 }
 
 .review-form__products {
   grid-column: 1/-1;
   grid-row: products-s/products-e;
   overflow-y: scroll;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (80px)[auto-fit];
+      grid-template-rows: repeat(auto-fit, 80px);
+  grid-row-gap: 12px;
+  -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .review-form__line {
@@ -1024,5 +1039,127 @@ body {
 .review-form__proceed {
   grid-row: buttons-s/buttons-e;
   grid-column: proceed-s/proceed-e;
+}
+
+.review-form__details {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -webkit-transform: translateX(-40px) translateY(60px);
+          transform: translateX(-40px) translateY(60px);
+}
+
+.review-detail {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [title-s] 1fr [title-e] 65px [price-s] 1fr [price-e];
+      grid-template-columns: [title-s] 1fr [title-e] 65px [price-s] 1fr [price-e];
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review-detail__title {
+  grid-column: title-s/title-e;
+  grid-row: 1/-1;
+  text-align: right;
+  font-size: 14px;
+}
+
+.review-detail__price {
+  grid-column: price-s/price-e;
+  grid-row: 1/-1;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.review-detail-green {
+  margin-top: 18px;
+}
+
+.review-detail-green__price, .review-detail-green__title {
+  font-weight: 600;
+  color: #00cb79;
+}
+
+.review-product {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [image-s] 80px [image-e title-s] 1fr [title-e quantity-s] 1fr [quantity-e price-s] 0.5fr [price-e];
+      grid-template-columns: [image-s] 80px [image-e title-s] 1fr [title-e quantity-s] 1fr [quantity-e price-s] 0.5fr [price-e];
+  -ms-grid-rows: [s] 1fr [e];
+      grid-template-rows: [s] 1fr [e];
+  grid-column-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review-product > * {
+  grid-row: s/e;
+}
+
+.review-product__image {
+  grid-column: image-s/image-e;
+}
+
+.review-product__title {
+  grid-column: title-s/title-e;
+  font-size: 18px;
+  font-family: 'Titillium Web';
+  color: #333;
+}
+
+.review-product__quantity {
+  grid-column: quantity-s/quantity-e;
+  font-size: 18px;
+  font-weight: 600;
+  color: #666666;
+}
+
+.review-product__price {
+  grid-column: price-s/price-e;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.review-form__legend {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80px [name-s] 1fr [name-e quantity-s] 1fr [quantity-e price-s] 0.5fr [price-e] 40px;
+      grid-template-columns: 80px [name-s] 1fr [name-e quantity-s] 1fr [quantity-e price-s] 0.5fr [price-e] 40px;
+  -ms-grid-rows: [s] 1fr [e];
+      grid-template-rows: [s] 1fr [e];
+  grid-column-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review-form__legend > * {
+  grid-row: s/e;
+}
+
+.review-form__legend__name {
+  grid-column: name-s/name-e;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.review-form__legend__quantity {
+  grid-column: quantity-s/quantity-e;
+}
+
+.review-form__legend__price {
+  grid-column: price-s/price-e;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 /*# sourceMappingURL=main.css.map */
