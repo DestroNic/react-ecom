@@ -1162,4 +1162,9 @@ body {
   -ms-grid-column-align: end;
       justify-self: end;
 }
+
+.shipping__form {
+  grid-row: content-s/content-e;
+  grid-column: s/e;
+}
 /*# sourceMappingURL=main.css.map */
