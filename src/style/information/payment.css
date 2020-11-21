@@ -1,1 +1,61 @@
-/* No CSS *//*# sourceMappingURL=payment.css.map */
+.payment {
+  grid-row: content-s/content-;
+  grid-column: s/e;
+}
+
+.payment__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [name-s] 64px [name-e card-s] 64px [card-e expiration-ccv-s] 64px [expiration-ccv-e] minmax(20px, 81px) [line-s] 26px [line-e buttons-s] 38px [buttons-e];
+      grid-template-rows: [name-s] 64px [name-e card-s] 64px [card-e expiration-ccv-s] 64px [expiration-ccv-e] minmax(20px, 81px) [line-s] 26px [line-e buttons-s] 38px [buttons-e];
+  -ms-grid-columns: [back-s] 137px [back-e space-s] 40px [space-e pay-complete-s] 1fr [pay-complete-e] 1fr;
+      grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e pay-complete-s] 1fr [pay-complete-e] 1fr;
+  grid-row-gap: 15px;
+}
+
+.payment-form__name {
+  grid-row: name-s/name-e;
+}
+
+.payment-form__card {
+  grid-row: card-s/card-e;
+}
+
+.payment-form__expiration, .payment-form__ccv {
+  grid-row: expiration-ccv-s/expiration-ccv-e;
+  grid-column: back-s;
+}
+
+.payment-form__expiration input, .payment-form__ccv input {
+  width: 200px;
+}
+
+.payment-form__ccv {
+  -webkit-transform: translateX(226px);
+          transform: translateX(226px);
+}
+
+.payment-form__line {
+  grid-row: line-s/line-e;
+  grid-column: 1/-1;
+  border-top: 1px solid #ccc;
+  margin-bottom: 24px;
+}
+
+.payment-form__back {
+  grid-row: buttons-s/buttons-e;
+  grid-column: back-s/back-e;
+}
+
+.payment-form__pay-complete {
+  grid-row: buttons-s/buttons-e;
+  grid-column: pay-complete-s/pay-complete-e;
+}
+
+.payment-form__order-summary {
+  grid-row: name-s;
+  grid-column: pay-complete-s/-1;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+/*# sourceMappingURL=payment.css.map */

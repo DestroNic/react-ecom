@@ -56,6 +56,13 @@
   grid-column: use-this-address-s/use-this-address-e;
 }
 
+.shipping-form__order-summary {
+  grid-row: name-s;
+  grid-column: use-this-address-e/-1;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
 .shipping {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
