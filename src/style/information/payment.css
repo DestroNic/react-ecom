@@ -58,4 +58,33 @@
   -ms-grid-column-align: end;
       justify-self: end;
 }
+
+.payment-form__shipping-info {
+  grid-row: name-s;
+  grid-column: pay-complete-s/-1;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.shipping-info {
+  width: 240px;
+  height: 150px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 30px 24px 24px;
+      grid-template-rows: 30px 24px 24px;
+  grid-row-gap: 5px;
+}
+
+.shipping-info > * {
+  grid-column: 1/-1;
+}
 /*# sourceMappingURL=payment.css.map */

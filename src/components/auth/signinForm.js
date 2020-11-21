@@ -31,7 +31,7 @@ class SignInForm extends Component {
                 <Field className='sign-in-form__email' name='email' type='email' title='Email' placeholder='Email' component={FormInput} />
                 <Field className='sign-in-form__password' name='password' type='password' title='Password' placeholder='Password' component={FormInput} />
                 <div className='sign-in-form__line'></div>
-                <Field className='sign-in-form__login' onClick={() => history.push('account')} name='login' type='submit' title='Login'  component={FormButton} />
+                <Field className='sign-in-form__login' name='login' type='submit' title='Login'  component={FormButton} />
                 <Details className='sign-in-form__details' title='QuickLinks' links={links} />
             </form>
         )
